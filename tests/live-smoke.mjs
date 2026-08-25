@@ -50,7 +50,7 @@ try {
   const state = await api('/api/state')
   note('GET /api/state', true, `provider=${state.provider}`)
   note('LLM provider is OpenRouter', state.provider === 'openrouter', state.provider)
-  note('key masked (no raw secret in API)', !String(state.keyMasked).includes('sk-or-v1-06'), state.keyMasked)
+  note('key masked (no raw secret in API)', String(state.keyMasked).includes('…'), state.keyMasked)
 
   const dump = await api('/api/tasks/dump-config/run', { method: 'POST', body: '{}' })
   note('Task Dump dsh config', dump.status === 'Done' && String(dump.messages?.at(-1)?.text).includes('dsh-web-app'), dump.status)
