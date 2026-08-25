@@ -1,6 +1,6 @@
 # Refro
 
-Work UI for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Chat, one-click tasks, skills, apps, and automations on a local dashboard.
+Web UI for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Chat, one-click tasks, skills, apps, and automations on a local dashboard.
 
 ## Run
 
