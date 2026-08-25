@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #dfe6f2;
+  --ink: #12131a;
+  --muted: #6b7288;
+  --line: rgba(18, 19, 26, 0.08);
+  --white: #ffffff;
+  --violet: #6d5ef6;
+  --violet-2: #8b7cff;
+  --coral: #ff7a45;
+  --lime: #d6ff3a;
+  --ok: #16a34a;
+  --rail: #111114;
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--canvas);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at 12% -10%, #f4f7ff 0%, transparent 55%),
+    radial-gradient(900px 500px at 90% 110%, #e4ddff 0%, transparent 50%),
+    var(--canvas);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.mono {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(18, 19, 26, 0.04);
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: rgba(18, 19, 26, 0.16);
+  border-radius: 99px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.45s ease both;
+}
